@@ -1,0 +1,11 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "pipeline": {
+      "build": {
+        "inputs": ["src/**", "package.json"],
+        "outputs": ["lib/**"]
+      },
+      "test": {},
+      "typecheck": {}
+    }
+  }

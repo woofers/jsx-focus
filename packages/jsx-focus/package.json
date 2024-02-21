@@ -1,0 +1,70 @@
+{
+    "name": "jsx-focus",
+    "version": "0.0.1",
+    "description": "",
+    "main": "lib/index.js",
+    "module": "lib/index.mjs",
+    "sideEffects": false,
+    "src": "src/index.tsx",
+    "types": "lib/index.d.ts",
+    "files": [
+      "lib",
+      "LICENSE",
+      "package.json",
+      "README.md"
+    ],
+    "repository": "https://github.com/woofers/jsx-focus",
+    "keywords": [
+      "react",
+      "reactjs",
+      "contact"
+    ],
+    "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/woofers/jsx-focus/issues"
+    },
+    "homepage": "https://jaxs.onl/jsx-focus/",
+    "scripts": {
+      "test": "bun typecheck && bun test --slient false",
+      "lint": "eslint \"src/**/*.{jsx,js,tsx,ts}\"",
+      "typecheck": "tsc --p .",
+      "types": "cp ./src/types.ts lib/types.d.ts",
+      "build": "bun lint && bun build:nolint",
+      "build:nolint": "bun typecheck && bun clean && bun types && bun build:module && bun build:dev:module && bun run build:legacy && bun build:dev:legacy",
+      "build:module": "bun build ./src/index.ts --outdir ./lib --external react --minify --define __isDev__=false --entry-naming=jsx-focus.mjs",
+      "build:dev:module": "bun build ./src/index.ts --outdir ./lib --external react --minify --define __isDev__=true --entry-naming=jsx-focus.dev.mjs",
+      "build:dev:legacy": "esbuild ./lib/jsx-focus.dev.mjs --outfile=./lib/jsx-focus.dev.js --format=cjs --minify",
+      "build:legacy": "esbuild ./lib/jsx-focus.mjs --outfile=./lib/jsx-focus.js --format=cjs --minify",
+      "clean": "rimraf lib/jsx-focus.dev.js lib/jsx-focus.js lib/jsx-focus.dev.mjs lib/jsx-focus.mjs"
+    },
+    "peerDependencies": {
+      "react": "^0.13.0 || ^0.14.0 || >=15"
+    },
+    "dependencies": { "@jest/globals": "^29.7.0", "@testing-library/react": "^14.0.0" },
+    "devDependencies": {
+      "@happy-dom/global-registrator": "^12.0.0",
+      "@types/react": "^18.2.21",
+      "@types/react-dom": "^18.2.7",
+      "@typescript-eslint/eslint-plugin": "^6.6.0",
+      "@typescript-eslint/parser": "^6.6.0",
+      "bun-types": "v1.0.1",
+      "esbuild": "^0.19.2",
+      "eslint": "^8.49.0",
+      "eslint-plugin-prettier": "^5.0.0",
+      "eslint-plugin-react": "^7.33.2",
+      "eslint-plugin-react-hooks": "^4.6.0",
+      "happy-dom": "^12.1.6",
+      "microbundle": "^0.15.1",
+      "prettier": "^3.0.3",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "rimraf": "^5.0.1",
+      "typescript": "^5.2.2"
+    },
+    "browserslist": [
+      "defaults",
+      "not IE 11"
+    ]
+  }
+  

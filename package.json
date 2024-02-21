@@ -1,0 +1,25 @@
+{
+    "name": "jsx-focus",
+    "version": "0.0.1",
+    "description": "",
+    "files": [
+      "index.js",
+      "package.json",
+      "README.md"
+    ],
+    "scripts": {
+      "build": "turbo run build",
+      "lint": "turbo run lint",
+      "test": "turbo run test",
+      "typecheck": "turbo run typecheck",
+      "format": "prettier --write \"packages/**/{src,tests}/**/*.{jsx,js,tsx,ts}\""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "workspaces": ["packages/*"],
+    "devDependencies": {
+      "prettier": "^3.0.3",
+      "turbo": "^1.10.15"
+    }
+  }
