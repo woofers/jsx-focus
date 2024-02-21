@@ -28,14 +28,14 @@
       "test": "bun typecheck && bun test --slient false",
       "lint": "eslint \"src/**/*.{jsx,js,tsx,ts}\"",
       "typecheck": "tsc --p .",
-      "types": "cp ./src/types.ts lib/types.d.ts",
+      "types": "tsc --emitDeclarationOnly --project tsconfig.json --outDir lib && rimraf lib/tsconfig.tsbuildinfo",
       "build": "bun lint && bun build:nolint",
       "build:nolint": "bun typecheck && bun clean && bun types && bun build:module && bun build:dev:module && bun run build:legacy && bun build:dev:legacy",
       "build:module": "bun build ./src/index.ts --outdir ./lib --external react --external react-dom --minify --define __isDev__=false --entry-naming=jsx-focus.mjs",
       "build:dev:module": "bun build ./src/index.ts --outdir ./lib --external react --external react-dom --minify --define __isDev__=true --entry-naming=jsx-focus.dev.mjs",
       "build:dev:legacy": "esbuild ./lib/jsx-focus.dev.mjs --outfile=./lib/jsx-focus.dev.js --format=cjs --minify",
       "build:legacy": "esbuild ./lib/jsx-focus.mjs --outfile=./lib/jsx-focus.js --format=cjs --minify",
-      "clean": "rimraf lib/jsx-focus.dev.js lib/jsx-focus.js lib/jsx-focus.dev.mjs lib/jsx-focus.mjs"
+      "clean": "rimraf lib/jsx-focus.dev.js lib/jsx-focus.js lib/jsx-focus.dev.mjs lib/jsx-focus.mjs lib/tsconfig.tsbuildinfo && rimraf lib/*.d.ts lib/utils lib/hooks"
     },
     "peerDependencies": {
       "react": "^0.13.0 || ^0.14.0 || >=15",

@@ -5,7 +5,7 @@
       "module": "esnext",
       "target": "esnext",
       "moduleResolution": "node",
-      "noEmit": true,
+      "noEmit": false,
       "moduleDetection": "force",
       "jsx": "react-jsx",
       "allowJs": false,
