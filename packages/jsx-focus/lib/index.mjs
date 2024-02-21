@@ -5,7 +5,7 @@ import {
   TrapFocus as TrapFocusProd,
   canUseDOM as canUseDOMProd,
   hasWindow as hasWindowProd,
-  isIosProdice as isIosProdiceProd,
+  isIosDevice as isIosDeviceProd,
   setRef as setRefProd,
   getOwnerDocument as getOwnerDocumentProd,
   useAriaHidden as useAriaHiddenProd,
@@ -37,7 +37,7 @@ export const Portal = process.env.NODE_ENV !== 'production' ? PortalDev : Portal
 export const TrapFocus = process.env.NODE_ENV !== 'production' ? TrapFocusDev : TrapFocusProd
 export const canUseDOM = process.env.NODE_ENV !== 'production' ? canUseDOMDev : canUseDOMProd
 export const hasWindow = process.env.NODE_ENV !== 'production' ? hasWindowDev : hasWindowProd
-export const isIosDevice = process.env.NODE_ENV !== 'production' ? isIosDeviceDev : isIosProdiceProd
+export const isIosDevice = process.env.NODE_ENV !== 'production' ? isIosDeviceDev : isIosDeviceProd
 export const setRef = process.env.NODE_ENV !== 'production' ? setRefDev : setRefProd
 export const getOwnerDocument = process.env.NODE_ENV !== 'production' ? getOwnerDocumentDev : getOwnerDocumentProd
 export const useAriaHidden = process.env.NODE_ENV !== 'production' ? useAriaHiddenDev : useAriaHiddenProd
