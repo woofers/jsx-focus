@@ -5,3 +5,4 @@ node_modules
 **/lib/jsx-focus.js
 **/.turbo
 **/dist
+**/dist/**/*.d.ts
