@@ -106,6 +106,7 @@ const getTabbable = (root: HTMLElement): HTMLElement[] => {
 }
 
 type TrapFocusProps = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   children: React.ReactElement<any, any>
 }
 

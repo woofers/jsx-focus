@@ -1,1 +1,7 @@
 node_modules
+**/lib/jsx-focus.dev.js
+**/lib/jsx-focus.dev.mjs
+**/lib/jsx-focus.mjs
+**/lib/jsx-focus.js
+**/.turbo
+**/dist

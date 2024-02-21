@@ -212,6 +212,7 @@ export const disableBodyScroll = (
   }
 
   if (isIosDevice()) {
+    // eslint-disable-next-line
     ;(targetElement as HTMLElement).ontouchstart = (
       event: HandleScrollEvent
     ) => {
@@ -243,6 +244,7 @@ export const enableBodyScroll = (
   locks = locks.filter(lock => lock.targetElement !== targetElement)
 
   if (isIosDevice()) {
+    // eslint-disable-next-line
     const el: any = targetElement
     el.ontouchstart = null
     el.ontouchmove = null
