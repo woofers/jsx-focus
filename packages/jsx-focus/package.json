@@ -16,8 +16,7 @@
     "repository": "https://github.com/woofers/jsx-focus",
     "keywords": [
       "react",
-      "reactjs",
-      "contact"
+      "reactjs"
     ],
     "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
     "license": "MIT",

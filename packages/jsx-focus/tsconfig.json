@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+      "types": ["bun-types"],
+      "lib": ["esnext"],
+      "module": "esnext",
+      "target": "esnext",
+      "moduleResolution": "node",
+      "noEmit": true,
+      "moduleDetection": "force",
+      "jsx": "react-jsx",
+      "allowJs": false,
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "declarationDir": "./lib",
+      "declaration": true,
+      "incremental": true,
+      "isolatedModules": true,
+      "downlevelIteration": true,
+      "outDir": "dist",
+      "experimentalDecorators": true,
+      "noUnusedParameters": false,
+      "preserveConstEnums": true,
+      "removeComments": false,
+      "sourceMap": false,
+      "noUnusedLocals": false,
+      "noUncheckedIndexedAccess": true,
+      "strict": false,
+      "baseUrl": "./src"
+  
+    },
+    "include": [
+      "index.d.ts",
+      "src/types/index.d.ts",
+      "src/**/*.ts",
+      "src/**/*.tsx"
+    ],
+    "exclude": ["node_modules", "lib"]
+  }
